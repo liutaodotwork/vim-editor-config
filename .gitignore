@@ -1,0 +1,36 @@
+.DS_Store
+
+.well-known/
+node_modules/
+
+webroot/_build/
+webroot/uploads/
+webroot/team/
+
+tests/_ci_phpunit_test/tmp/cache/
+tests/.phpunit.result.cache
+
+tags
+!app/views/team/posts/tags
+!app/views/team/clients/tags
+
+composer.lock
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+.buildpath
+.project
+.settings/
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+## vi swp files
+*.swp
+
