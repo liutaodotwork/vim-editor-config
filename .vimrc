@@ -79,8 +79,8 @@ if has('gui_running')
 
     "set background=dark
 
-    set guifont=Hermit\ medium:h10
-    "set guifont=Monaco\:h11
+    "set guifont=Hermit\ medium:h10
+    set guifont=Monaco\:h11
 else
     "set background=dark
 endif
