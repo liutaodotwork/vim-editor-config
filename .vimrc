@@ -1,5 +1,5 @@
 execute pathogen#infect()
-"""""""""""""""""""""""""""""""""""""""Basic"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""Basic"""""""""""""""""""""""""""""""""""
 " no vi defaults
 set nocompatible 
 
@@ -34,7 +34,8 @@ set ofu=syntaxcomplete#Complete
 :nnoremap <F2> :tprevious<CR>
 :nnoremap <F3> :tnext<CR>
 
-"""""""""""""""""""""""""""""""""""""""Whitespace""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""Whitespace"""""""""""""""""""""""""""""""
 " wrap lines
 set wrap
 
@@ -77,30 +78,56 @@ if has('gui_running')
     "colorscheme evening
     "colorscheme desert
 
-    "set background=dark
-
-    "set guifont=Hermit\ medium:h10
-    set guifont=Monaco\:h11
-else
-    "set background=dark
+    set guifont=Hermit\ medium:h11
+    "set guifont=Monaco\:h11
 endif
 
 set vb t_vb=
 
-"""""""""""""""""""""""""""""""""""""""Plugins"""""""""""""""""""""""""""""""""""""""""
-map <F8> :NERDTreeToggle<CR>
 
-"ctrlp
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=80
-" Make CtrlP faster by making it skip files inside .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"""""""""""""""""""""""""""""""""""""""Plugins"""""""""""""""""""""""""""""""""""""""""
+
+"NERDTree
+"""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+
+"fzf
+"""""""""""""""""""""""""""""""""""""""
+
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+
+" If installed using git
+"set rtp+=~/.fzf
+
+nnoremap <leader>s :FZF -i<CR>
+
 
 "snipMate
+"""""""""""""""""""""""""""""""""""""""
+
 au BufRead,BufNewFile *.php set ft=php.html.javascript.css
 
 let g:vim_markdown_folding_disabled=1
 
-"""""""""""""""""""""""""""""""""New Extensions""""""""""""""""""""""
+"ask with the_silver_searcher
+"""""""""""""""""""""""""""""""""""""""
+
+" If installed using Homebrew
+set rtp+=/usr/local/opt/ag
+
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <leader>a :Ack!<Space>
+nnoremap <leader>g :Ack! "\b<C-R><C-W>\b"<CR>
+
+
+" ============================================================================
+" New File Extensions
+" ============================================================================
 autocmd BufNewFile,BufRead *.wxss set syntax=css
 autocmd BufNewFile,BufRead *.wxml set syntax=html
