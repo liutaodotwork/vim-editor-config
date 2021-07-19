@@ -102,7 +102,7 @@ set rtp+=/usr/local/opt/fzf
 " If installed using git
 "set rtp+=~/.fzf
 
-nnoremap <leader>s :FZF -i<CR>
+nnoremap <leader>f :FZF -i<CR>
 
 
 "snipMate
@@ -122,8 +122,8 @@ if executable('ag')
     let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 cnoreabbrev Ack Ack!
-nnoremap <leader>a :Ack!<Space>
-nnoremap <leader>g :Ack! "\b<C-R><C-W>\b"<CR>
+nnoremap <leader>s :Ack!<Space>
+nnoremap <leader>c :Ack! "\b<C-R><C-W>\b"<CR>
 
 
 " ============================================================================
