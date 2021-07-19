@@ -102,14 +102,17 @@ set rtp+=/usr/local/opt/fzf
 " If installed using git
 "set rtp+=~/.fzf
 
-nnoremap <leader>f :FZF -i<CR>
+nnoremap <leader>o :FZF -i<CR>
 
 
-"snipMate
+"vim-snipmate
 """""""""""""""""""""""""""""""""""""""
 
 au BufRead,BufNewFile *.php set ft=php.html.javascript.css
 
+
+"vim-markdown
+"""""""""""""""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled=1
 
 "ask with the_silver_searcher
