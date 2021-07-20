@@ -108,12 +108,16 @@ nnoremap <leader>o :FZF -i<CR>
 "vim-snipmate
 """""""""""""""""""""""""""""""""""""""
 
-au BufRead,BufNewFile *.php set ft=php.html.javascript.css
+au BufRead,BufNewFile *.php set ft=php.html.javascript.css.carttao
+
 
 
 "vim-markdown
 """""""""""""""""""""""""""""""""""""""
+
 let g:vim_markdown_folding_disabled=1
+
+
 
 "ask with the_silver_searcher
 """""""""""""""""""""""""""""""""""""""

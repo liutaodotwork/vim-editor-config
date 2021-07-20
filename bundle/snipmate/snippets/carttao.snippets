@@ -1,0 +1,22 @@
+# load resources
+snippet loadmodel
+	$this->load->model( [
+		'${1:modelname}_model',
+		'${2:modelname}_model'
+	] );
+
+snippet loadhelper
+	$this->load->helper( [
+		'${1:helper_name}'
+	] );
+
+snippet loadlang
+	$this->lang->load( [
+		'${1:lang_name}'
+	] );
+
+# input
+
+# output
+snippet enableprofiler
+	$this->output->enable_profiler( ${1:FALSE} );
