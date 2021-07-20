@@ -78,7 +78,7 @@ if has('gui_running')
     "colorscheme evening
     "colorscheme desert
 
-    set guifont=Hermit\ medium:h11
+    set guifont=Hermit\ Regular:h11
     "set guifont=Monaco\:h11
 endif
 
