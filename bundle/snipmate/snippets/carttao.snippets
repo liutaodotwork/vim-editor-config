@@ -16,7 +16,15 @@ snippet loadlang
 	] );
 
 # input
+snippet inputget
+	$${1:var} = $this->input->get( '${2:name}', TRUE );
+
+snippet inputpost
+	$${1:var} = $this->input->post( '${2:name}', TRUE );
+
+snippet inputpostget
+	$${1:var} = $this->input->post_get( '${2:name}', TRUE );
 
 # output
-snippet enableprofiler
+snippet profiler
 	$this->output->enable_profiler( ${1:FALSE} );
