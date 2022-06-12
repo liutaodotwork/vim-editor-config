@@ -1,3 +1,30 @@
+# last psql
+snippet psql
+	$this->db->last_query()
+# load resources
+snippet loadmodel
+	$this->load->model( [
+		'${1:modelname}_model',
+		'${2:modelname}_model'
+	] );
+snippet loadhelper
+	$this->load->helper( [
+		'${1:helper_name}'
+	] );
+snippet loadlang
+	$this->lang->load( [
+		'${1:lang_name}'
+	] );
+# input
+snippet inputget
+	$${1:var} = $this->input->get( '${2:name}', TRUE );
+snippet inputpost
+	$${1:var} = $this->input->post( '${2:name}', TRUE );
+snippet inputpostget
+	$${1:var} = $this->input->post_get( '${2:name}', TRUE );
+# output
+snippet profiler
+	$this->output->enable_profiler( ${1:FALSE} );
 snippet eve
 	echo "<pre>";
 	var_dump(${1});
