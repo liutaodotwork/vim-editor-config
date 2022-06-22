@@ -71,16 +71,16 @@ set go-=T
 if has('gui_running')
     "colorscheme torte
     "colorscheme industry
-    "colorscheme zellner
+    colorscheme zellner
     "colorscheme darkblue
     "colorscheme default
     "colorscheme solarized
     "colorscheme evening
-    colorscheme desert
+    "colorscheme desert
     "colorscheme delek
 
     "set guifont=Hermit\ Regular:h10
-    set guifont=Fixedsys\ Excelsior\ 3.01:h11
+    set guifont=Fixedsys\ Excelsior\ 3.01:h12
     "set guifont=Monaco\:h11
 endif
 
