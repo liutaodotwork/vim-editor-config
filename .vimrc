@@ -99,10 +99,13 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""
 
 " If installed using Homebrew
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
+
+" If installed using Homebrew on Apple Silicon
+set rtp+=/opt/homebrew/opt/fzf
 
 " If installed using git
-"set rtp+=~/.fzf
+" set rtp+=~/.fzf
 
 nnoremap <leader>o :FZF -i<CR>
 
@@ -125,7 +128,7 @@ let g:vim_markdown_folding_disabled=1
 """""""""""""""""""""""""""""""""""""""
 
 " If installed using Homebrew
-set rtp+=/usr/local/opt/ag
+set rtp+=/opt/homebrew/bin/ag
 
 if executable('ag')
     let g:ackprg = 'ag --nogroup --nocolor --column'
