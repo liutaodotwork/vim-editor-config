@@ -15,3 +15,11 @@ git clone https://github.com/liutaodotwork/vim-editor-config.git .vim
 ```
 ln -sf ~/.vim/.vimrc ~/.vimrc
 ```
+
+## Install `Ack` and `fzf`
+
+```
+dnf install epel-release
+
+dnf install ack fzf
+```
